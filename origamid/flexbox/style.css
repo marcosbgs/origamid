@@ -1,0 +1,12 @@
+h1 {
+  margin: 0;
+  padding: 10px;
+  background: lightblue;
+}
+
+.index1 {
+  position: relative;
+  background: greenyellow;
+  top: 30px;
+  z-index: -1; /*fica atrás dos elementos*/
+}
