@@ -1,0 +1,35 @@
+.bicicleta {
+    height: 600px;
+    background-color: aquamarine; /*é aplicado quando a imagem NÃO SE REPETE*/
+    background-image: url("/posicionamento/img/bicicleta.jpg"); /*por padrão, a imagem se repete*/
+    background-repeat: no-repeat;
+    background-size: cover; /*cover cobre a área inteira*/
+    background-position: center top;
+    /*background: lightblue url("/posicionamento/img/bicicleta.jpg") no-repeat cover center top; /*ATALHO PARA AS OUTRAS PROPRIEDADES DEFINIDAS INDIVIDUALMENTE*/
+    display: flex;
+}
+
+h1 {
+    margin: auto;
+    background: white;
+    padding: 1rem 2rem;
+}
+
+.pattern {
+    height: 300px;
+    background-color: lightcoral;
+    background-image: url("/posicionamento/img/pattern.svg");
+    background-repeat: repeat;
+    /*background-size: 500px;*/
+}
+
+
+/*.linear {
+    height: 200px;
+    background-image: linear-gradient(25deg, lightblue, lightcoral, blue, green,red);
+}*/
+
+.radial {
+    height: 200px;
+    background-image: radial-gradient(circle, lightcoral, black);
+}
