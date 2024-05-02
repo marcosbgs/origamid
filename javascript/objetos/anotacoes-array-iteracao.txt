@@ -1,0 +1,96 @@
+=> FOREACH 
+    [].forEach(callback(itemAtual, index, array)) --> função de callback é executada para cada item de array. 
+
+    itemAtual -> valor do item da array
+    index -> index do valor na array
+    array -> array original. Tem valor de referência, ou seja, se eu modificar aqui, modifico a array original
+
+    const carros = ['Ford', 'Fiat', 'Honda'];
+    carros.forEach(function(item, index, array) {
+    console.log(item.toUpperCase());
+    });
+
+    // com Arrow Function
+    carros.forEach((item, index, array) => {
+    console.log(item.toUpperCase());
+    });
+
+    - o terceiro argumento é uma referência direta a ARRAY. Se modificarmos ela, modifica a ARRAY ORIGINAL.
+        const carros = ['Ford', 'Fiat', 'Honda'];
+
+        carros.forEach((item, index, array) => {
+        array[index] = 'Carro ' + item;
+        });
+
+        console.log(carros); // ['Carro Ford', 'Carro Fiat', 'Carro Honda']
+
+=> MAP()
+    [].map(callback(itemAtual, index, array)) --> funciona da mesma forma que o FOREACH. Porém, o map() retorna uma nova array com valores atualizados.
+
+        const carros = ['Ford', 'Fiat', ''Honda];
+        const newCarros = carros.map((item) => {
+            return 'Carro ' + item;
+        });
+
+        console.log(carros);
+        console.log(newCarros);
+
+=> map() x forEach()
+    - sempre que precisar de uma nova array, a partir da array original, USA MAP()
+    - se não quero uma nova array, apenas realizar um ação para cada item (adicionar uma classe), USA FOREACH()
+
+=> REDUCE()
+    [].reduce(callback(acumulador, valorAtual, index, array), valorInicialAcumulador) --> 
+        const aulas = [10, 25, 30];
+
+        const reduceAulas = aulas.reduce((acumulador, item, index, array) => {
+            console.log(acumulador, item, index);
+            return acumulador + item;
+        }, 0);
+
+        console.log(reduceAulas);
+
+        => MOSTRANDO O MAIOR NÚMERO
+            const numeros = [10, 25, 30, 3, 55, 852, 5, 44, 6, 520, 47];
+
+            const maiorNumero = numeros.reduce((anterior, atual) => {
+                if(anterior > atual)
+                    return anterior;
+                else
+                    return atual;
+            }, 0);
+
+            console.log(maiorNumero);
+
+    - se não passar o valorInicialAcumulador reduce pula a primeira ITERAÇÃO;
+
+=> REDUCERIGHT()
+    [].reduceRight() --> mesma coisa do reduce(),porém começa da DIREITA PARA A ESQUERDA
+
+=> SOME()
+    [].some() -> pelo menos um return tem que ser truthy para retornar true
+
+        const frutas = ['Banana', 'Pêra', 'Uva'];
+        const temUva = frutas.some((fruta) => {
+        return fruta === 'Uva';
+        }); // true
+
+        function maiorQue100(numero) {
+        return numero > 100;
+        }
+        const numeros = [0, 43, 22, 88, 101, 2];
+        const temMaior = numeros.some(maiorQue100); // true
+
+=> EVERY()
+    [].every() -> todos os return tem que ser truthy. Se um for falsy, retornará false;
+
+        const frutas = ['Banana', 'Pêra', 'Uva', ''];
+        // False pois pelo menos uma fruta
+        // está vazia '', o que é um valor falsy
+        const arraysCheias = frutas.every((fruta) => {
+        return fruta; // false
+        });
+
+        const numeros = [6, 43, 22, 88, 101, 29];
+        const maiorQue3 = numeros.every(x => x > 3); // true
+
