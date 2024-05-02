@@ -67,3 +67,122 @@
 
     --> GRID-AUTO-FLOW: por padrão, ao definir o display: grid; caso não caiba mais elementos, irá quebrar em linhas. O auto-flow define se quero que crie novas linhas ou novas colunas.
         - grid-auto-flow: column;
+
+    --> JUSTIFY-CONTENT: alinha os itens do grid em relação ao eixo HORIZONTAL
+        - justify-content: start; -> alinha os itens ao início (lado esquerdo da página)
+
+        - justify-content: end; -> alinha os itens ao final (lado direito da página)
+
+        - justify-content: center; -> alinha ao centro
+
+        - justify-content: stretch; -> estica os itens PADRÃO
+
+        - justify-content: space-around; -> distribui espaço entre os elementos. Os espaços do meio são maiores do que os do início e do final
+
+        - justify-content: space-between; -> cria espaço ENTRE os elementos. O início e final não tem espaço
+
+        - justify-content: space-evenly; -> cria um espaço IGUAL entre os elementos, no início e no final
+
+    --> ALIGN-CONTENT: alinha os itens do grid em relação ao eixo VERTICAL
+        - align-content: start; -> alinha os elementos ao início (parte superior da página)
+
+        - align-content: end; -> alinha os elementos ao final (parte inferior da página)
+
+        - align-content: center; -> alinha ao centro
+
+        - align-content: stretch; -> estica os elementos PADRÃO
+
+        - align-content: space-around; -> distribui espaço entre os elementos. Os espaços do meio são maiores do que os do início e do final
+
+        - align-content: space-between; -> cria espaço ENTRE os elementos. O início e final não tem espaço
+
+        - align-content: space-evenly; -> cria um espaço IGUAL entre os elementos, no início e no final
+
+    --> JUSTIFY-ITEMS: alinha o CONTEÚDO dos elementos do grid em relaçao ao eixo HORIZONTAL
+        - justify-items: start; -> alinha os itens ao início (lado esquerdo da página)
+
+        - justify-items: end; -> alinha os itens ao final (lado direito da página)
+
+        - justify-items: center; -> alinha ao centro
+
+        - justify-items: stretch; -> estica os itens
+
+    --> ALIGN-ITEMS: alinha o CONTEÚDO dos itens do grid em relação ao eixo VERTICAL
+        - align-items: start; -> alinha os itens ao início (parte superior da página)
+
+        - align-items: end; -> alinha os itens ao final (parte inferior da página)
+
+        - align-items: center; -> alinha ao centro
+
+        - align-items: stretch; -> estica os itens
+
+=> GRID ITEM
+    - filhos diretos do GRID CONTAINER
+
+    --> GRID-COLUMN: define quais colunas serão ocupadas pelo grid item. Podemos definir uma linha de início e final.
+        - grid-column: 1; -> ocupará a COLUNA 1
+
+        - grid-column: 1 / 3; -> o item ocupará 2 colunas. COMEÇA na LINHA 1 e TERMINA na LINHA 3.
+        - grid-column: 1 / -1; -> ocupará a coluna de ponta a ponta (todas as linhas)
+
+        - grid-column-start: 2; -> o item começa na LINHA 2.
+        - grid-column-end: 3; -> o item termina na LINHA 3
+
+        - grid-column: span 2; -> o item ocupa duas colunas a partir da coluna em que estiver.
+
+    --> GRID-ROW: define quais linhas serão ocupadas pelo grid item. Podemos definir as GRID LINES de início e final.
+
+        - grid-row: 1; -> ocupará a LINHA 1
+
+        - grid-row: 1 / 3; -> o item ocupará 2 linhas. COMEÇA na GRID LINE 1 e TERMINA na GRID LINE 3.
+        - grid-row: 1 / -1; -> ocupará a linha de ponta a ponta (todas as grid lines)
+
+        - grid-row-start: 2; -> o item começa na GRID LINE 2.
+        - grid-row-end: 3; -> o item termina na GRID LINE 3
+
+        - grid-row: span 2; -> o item ocupa duas linhas a partir da linha em que estiver.
+
+    --> GRID-AREA: define a área do item do grid. ATALHO para grid-row-start, grid-column-start, grid-row-end, grid-column-end.
+        - o z-index pode ser utilizado para manipular no EIXO Z (para frente). Se um item estiver na frente do outro,o z-index controla quem vem primeiro.
+
+        - grid-area: 1 / 2 / 4 / 3;
+            ATALHO PARA: (sempre nessa ordem)
+                grid-row-start: 1;
+                grid-column-start: 2;
+                grid-row-end: 4;
+                grid-column-end: 3;
+
+        - grid-area: span 2 / 3;
+            ATALHO PARA:
+                grid-row-start: span 2;
+                grid-column-star: 3;
+
+        - grid-area: interessante usar quando utilizamos o grid-template-areas também.
+            grid-template-areas:
+                "header header header"
+                "sidenav content ads"
+                "sidenav footer footer"
+            ;
+        - grid-area: header; -> o item ocupará a área demarcada como HEADER PELO GRID-TEMPLATE-AREA.
+        - grid-area: sidenav; -> o item ocupará a área demarcada como SIDENAV PELO GRID-TEMPLATE-AREA.
+        
+    --> JUSTIFY-SELF: alinha o item do grid em relação ao eixo HORIZONTAL. É REFERENTE A UM ITEM ESPECÍFICO.
+
+        - justify-self: start; -> alinha no início. (lado esquerdo)
+
+        - justify-self: end; -> alinha ao final (lado direito)
+
+        - justify-self: center; alinha ao centro
+
+        - justify-self: stretch; estica o item
+
+    --> ALIGN-SELF: alinha o item do grid em relação ao eixo VERTICAL. É REFERENTE A UM ITEM ESPECÍFICO.
+
+        - align-self: start; -> alinha no início. (parte superior)
+
+        - align-self: end; -> alinha ao final (parte inferior)
+
+        - align-self: center; alinha ao centro
+
+        - align-self: stretch; estica o item
+         
