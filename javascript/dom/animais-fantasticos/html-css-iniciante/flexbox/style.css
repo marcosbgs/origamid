@@ -1,0 +1,12 @@
+.flex{
+  display: flex;
+  background: dodgerblue;
+}
+
+.flex  div {
+  padding: 20px;
+  background: #f1f1f1;
+  font-weight: bold;
+  justify-content:center;
+  align-items: center;
+}

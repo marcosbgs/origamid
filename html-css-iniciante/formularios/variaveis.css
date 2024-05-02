@@ -1,0 +1,15 @@
+:root {
+    --roxo: #84e;
+    --borda: 4px solid blue;
+    --fonte-grande: 3rem;
+}
+
+h1 {
+    color: var(--roxo);
+    font-size: var(--fonte-grande);
+}
+
+p {
+    font-size: calc(var(--fonte-grande) / 2); /*DIVIDINDO O VALOR DA VARIÁVEL POR 2*/
+    color: var(--roxo);
+}

@@ -1,0 +1,96 @@
+=> FLEX CONTAINER
+    * DISPLAY
+        - display: flex;
+        - o elemento vira flex CONTAINER 
+        - o tamanho do item é do tamaho do conteúdo
+        - fica tudo na mesma linha
+    * FLEX-DIRECTION
+        - define a direção que os flex-item terão
+        - por padrão é FLEX-ROW
+        - no mobile geralmente utiliza o flex-direction: column
+        - flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+    * FLEX-WRAP
+        - define se quebra linha ou não
+        - por padrão é NO-WRAP
+        - não quebra a palavra
+        - flex-wrap: nowrap;
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+    * FLEX-FLOW
+        - atalho para as propriedades FLEX-DIRECTION e FLEX-WRAP
+        - flex-flow: row nowrap; linha e não quebra a linha
+            flex-flow: row wrap; linha e quebra a linha
+            flex-flow: column nowrap; coluna e não quebra a linha
+    * JUSTIFY-CONTENT
+        - alinha os items flex de acordo com a direção (linha ou coluna) NA HORIZONTAL
+        - funciona somente se tiver espaço no CONTAINER. Tem que ter um espaço entre os itens
+        - se os items tiver "flex: 1" o justify não funciona mais.
+        - ótimo para alinha items numa ponta da esquerda e outro na direita
+        - justify-content: flex-start; PADRÃO - alinha no início do container
+            justify-content: flex-end; alinha no finala do container
+            justify-content: center; alinha no centro do container
+            justify-content: space-between; cria um espaçamento IGUAL entre os elementos, mantendo o PRIMEIRO e o ÚLTIMO grudados no início e final respectivamente
+            justify-content: space-around; cria uma epaçamento entre os elementos. Os espaçamentos do MEIO são DUAS VEZES maiores do que os do INÍCIO E FINAL
+    * ALIGN-ITEMS
+        - alinha os FLEX-ITEMS de acordo com o eixo do container
+        - alinhamento CENTRAL no EIXO VERTICAL
+        - align-items: stretch; PADRÃO - faz os flex item CRESCEREM IGUALMENTE
+            align-items: flex-start; - alinha os itens no início. Os itens ocupam o tamanho deles (pode ter tamanho diferente)
+            align-items: flex-end; alinha os itens no final. Os itens ocupam o tamanho deles (pode ter tamanho diferente)
+            align-items: center; alinha os itens ao centro. Os itens ocupam o tamanho deles (pode ter tamanho diferente)
+            align-items: baseline; alinha os iten de acordo com a linha base da tipografia
+            alinhamento central : justify-content: center; e align-items: center;
+    * ALIGN-CONTENT
+        - alinha os items do container em relação ao eixo vertical
+        - ALINHA NA VERTICAL
+        - o FLEX-WRAP precisa ser WRAP
+        - tem que definir o height
+        - só funciona se tiver mais de uma linha de flex item
+        - align-content: stretch; PADRÃO - faz com que os flex-items cresçam IGUALMENTE NA VERTICAL
+            align-content: flex-start; alinha todas as linhas de itens no início
+            align-content: flex-end; alinha todas as linhas de itens no final
+            align-content: center; alinha todas as linhas de itens no centro
+            align-content: space-between; cria um espaçamento IGUAL entre as linhas, mantendo o PRIMEIRO grudado no TOPO e o ÚLTIMO grudado no BOTTOM
+            align-content: space-around; cria um espaçamento entre as linhas. Os espaçamentos do meio são DUAS VEZES MAIORES DO QUE O DO TOPO E DO BOTTOM
+
+=> FLEX ITEM
+    São filhos DIRETOS do FLEX CONTAINER
+    * FLEX-GROW
+        - habilidade de um flex item crescer 
+        - ocupam o tamanho máximo do conteúdo deles. Por PADRÃO é 0.
+        - ao definir o valor como 1, terão a mesma LARGURA ocuparão 100% do CONTAINER
+        - JUSTIFY-CONTENT NÃO FUNCIONA EM ITEMS COM FLEX-GROW DEFINIDO
+        - flex-grow: 0; PADRÃO - o item fica com o tamanho do conteúdo interno
+            flex-grow: 1; - ocupam 100% do container
+    * FLEX-BASIS
+        - 
+    * FLEX-SHRINK
+        - define a capacidade de redução de tamanho do item.
+        - flex-shrink: 1; - PADRÃO - permite que os items diminuam de tamanho para caber no container
+            flex-shrink: 0; não permite a diminuição do item com flex-basis: 300px;
+    * FLEX
+        - atalho para FLEX-GROW, FLEX-BASIS e FLEX-SHRINK
+        - flex: grow shrink basis;
+        - flex: 0 1 auto - PADRÃO
+        - flex: 1; grow: 1, shrink: 1 e basis: 0;
+    * ORDER
+        - modifica a ordem dos flex-item.
+        - sempre do menor para o maior
+        - "order: 1" fica na frente do "order: 5"
+        - pode ser número negativo
+        - se quiser colocar um item do meio, no início, tem que usar um valor negativo, já que os outros são 0
+        - order: 0; PADRÃO - a ordem dos itens é a ordem colocada no HTML
+    * ALIGN-SELF
+        - alinhamento ESPECÍFICO DE UM ÚNICO FLEX ITEM dentro do container
+        - DEVE IR NO ITEM
+        - passa por cima do valor definido no ALIGN ITEM
+        - align-self: auto; PADRÃO - respeita o que foi definido no align-items no container
+            align-self: flex-start; alinha o item ao INÍCIO
+            align-self: flex-end; alinha o item ao FINAL
+            align-self: center; alinha o item ao CENTRO
+            align-self: baseline; alinha o item a LINHA DE BASE
+            align-self: stretch; ESTICA O ITEM
+    

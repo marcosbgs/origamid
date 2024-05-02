@@ -1,0 +1,14 @@
+/* 
+max-width: 100%; MÁXIMO DO TAMANHO REAL DA IMAGEM E NÃO DO CONTAINER
+SEMPRE BOM USAR IMAGEM COM O DOBRO DO TAMANHO QUE ELA VAI USAR NA TELA
+png tem tamanho fixo
+svg NÃO tem tamanho fixo e tem melhor resolução
+geralmente imagens com valores MENORES que 1MB
+*/
+
+img {
+    max-width: 100%; 
+    width: 600px;
+    display:block
+}
+

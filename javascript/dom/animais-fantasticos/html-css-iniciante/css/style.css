@@ -1,0 +1,16 @@
+div {
+    background-color: aqua;
+    width: 140px;
+    height: 80px;
+    padding: 20px;
+    border: 10px solid black;
+    margin: 30px;
+}
+
+h1 {
+    background-color: coral;
+    padding: 20px;
+    width: auto;
+    border: 4px solid grey;
+    margin: 40px; /* AS MARGENS COLIDEM. A MAIOR MARGEM PREVALECE*/
+}

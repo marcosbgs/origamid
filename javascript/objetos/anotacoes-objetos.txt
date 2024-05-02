@@ -1,0 +1,36 @@
+=> OBJETOS
+    - criar objeto: const carro = {
+        marca: 'Honda',
+        preco: 0,
+    }
+
+=> CONSTRUCTOR FUNCTIONS
+    - responsáveis por contruir novos objetos sempre que chamamos
+    - CRIANDO UMA COSNTRUCTOR FUNCTION
+        - function Carro() {
+            this.marca = 'Marca'; //CRIA UMA NOVA PROPRIEDADE PARA O OBJETO
+            this.preco = 0;
+        }
+    - const honda = new Carro();
+        honda.marca = 'Honda';
+        honda.preco = 4000;
+    - const fiat = new Carro();
+        fiat.marca = 'Fiat';
+        fiat.preco = 3000;
+
+=> NEW KEYWORD
+    - "new" é responsável por criar um NOVO OBJETO BASEADO NA FUNÇÃO QUE PASSAMOS
+    - posso atribuir parâmetros na função;
+        function Carro(marcaAtribuida, precoAtribuido) {
+            this.marca = marcaAtribuida; //CRIA UMA NOVA PROPRIEDADE PARA O OBJETO
+            this.preco = precoAtribuido;
+        }
+            const honda = new Carro('Honda Civic', 4000);
+
+=> THIS KEYWORD
+    - faz referência ao próprio objeto construído com a CONSTRUCTOR FUNCTION
+
+=> PROTOTYPE
+    - é uma propriedade 
+    - é um OBJETO adicionado a uma FUNÇÃO quando a mesma é criada
+    

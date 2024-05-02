@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulários</title>
+</head>
+<body>
+    <form action="./">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="CPF">CPF</label>
+        <input type="text" name="CPF" id="CPF" placeholder="xxx.xxx.xxx-xx">
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+
+        <div class="checkbox">
+            <input type="checkbox" id="termos" name="termos" value="aceito">
+            <label for="termos">Termos</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="radio" id="retirada" name="retirada">
+            <label for="retirada">Retirar no local</label>
+        </div>
+        <div class="checkbox">
+            <input type="radio" id="retirada" name="retirada">
+            <label for="retirada">Entrega em casa</label>
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade">
+
+        <label for="saida">Saída</label>
+        <input type="date" name="saida" id="saida">
+
+        <button>Enviar</button>
+    </form>
+    
+</body>
+</html>

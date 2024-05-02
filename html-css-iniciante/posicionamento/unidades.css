@@ -1,0 +1,25 @@
+/*
+*********** UNIDADE REM ************
+
+1 rem = 16px / px para rem = 24px/16=1.5rem
+
+rem dá mais acessibilidade do que o px. 
+rem respeita a relação de unidade raiz, que no caso é da tag html que por padrão tem 
+16px. Se mudar a font-size do html, muda o padrão do rem. Se o font-size da tag html
+for de 24px, 1 rem = 24px. o px não sofre essa influência
+
+*********** UNIDADE EM *************
+
+a unidade "em" muda em relação ao elemento PAI, enquanto que a unidade "rem", muda em relação ao elemento RAÍZ.
+
+**********VW E VH******************
+
+vw = view port width = ocupa toda a LARGURA da tela / 100vw
+vh = view port heigth = ocupa toda a ALTURA da tela / 100vh
+
+********** FUNÇÃO CALC() ************
+
+calc() - função que retorna um valor calculado dentro dos ()
+calc(100vw/3) = 1/3 da tela
+calc(100%-20px) = remove 20px de 100%
+*/

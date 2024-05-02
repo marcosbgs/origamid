@@ -1,0 +1,69 @@
+=> apenas itens DIRETOS do GRID CONTAINER serão elementos grid
+
+=> GRID CONTAINER
+    --> DISPLAY: 
+        - grid; torna o elemento um grid CONTAINER
+
+        - inline-grid; torna oelemento grid container com comportamento inline
+
+        - subgrid; grid dentro de grid.
+
+    --> GRID-TEMPLATE-COLUMNS: 
+        - grid-template-columns: 100px 100px 100px; três colunas de 100px de largura
+
+        - grid-template-columns: 1fr 2fr; unidade fracionada.  a Segunda coluna tem o dobro do tamanho da primeira. RESPEITA O TAMANHO DO ITEM.
+
+        - grid-template-columns: minmax(200px, 1fr) 1fr 1fr; 3 colunas.a primeira terá 200px no mínimo (as outras colunas ficam menor que 200px, mas essa não) e no máximo 1fr. Após 200px, a coluna se expande como as outras. Com o MINMAX o conteúdo estoura o container.
+
+        - grid-template-columns: repeat(3, 1fr); cria 3 colunas de 1fr
+                                 repeat(auto-fit, 100px) coloca a quantidade maxima de colunas de 100px no container. calculo automático
+
+        - grid-template-columns: repeat(auto-fit, minmax(100px, auto)); Cria automaticamente um total de colunas que acomode itens com no mínimo 100px de largura. Cria um layout responsivo
+
+    --> GRID-TEMPLATE-ROWS: define a quantidade de LINHAS
+        - grid-templete-rows: 50px 100px 40px; cria colunas de acordo com o tamnho. A primeira 50px, a segunda 100px e por ai vai. Se precisar de mais linha, cria de acordo com o tamanho do conteúdo.
+
+        - grid-templete-rows: 1fr 2fr;
+
+    --> GRID-TEMPLATE-AREAS: define áreas específicas no grid. Trabalha em conjunto com o grid item "grid-area"
+        - grid-template-areas: 
+            "logo nav nav"
+            "sidenav content advert"
+            "sidenav footer footer";
+        <div class="item navegacao">nav</div>
+        .navegacao { -> faz referência a classe com a tag nav
+            grid-area: nav; -> faz referência ao nav do grid-template-areas  
+        }
+        .sidenav {
+            grid-area: sidenav;
+        }
+
+    --> GRID-TEMPLATE: atalho para linha, coluna e area.
+        - grid-template: 100px 50px / 1fr 1fr;
+                         primeira linha segunda linha / primeira coluna segunda coluna
+
+        - grid-template: já define o grid area com o tamanho da linha e no final depois da barra as colunas. 
+            "logo nav nav" 50px
+            "sidenav content advert" 150px
+            "sidenav footer footer" 100px
+            / 100px 1fr 50px;
+
+    --> GAP: espaços entre os elementos. O espaçamento é INTERNO. Soma o espaçamento com o margin. margin de 5px e gap de 20px, no total serão 25px.
+        - gap: 20px; define 20px entre os elementos (linhas e colunas)
+
+        - gap: 20px 10px; primeiro valor é sobre linhas e o segundo sobre colunas
+
+        - column-gap: 20px; define o gap entre as colunas
+
+        - row-gap: 20px; define o gap entre as linhas
+
+    --> GRID-AUTO-COLUMNS: ao criar uma coluna automáticamente, define o tamanho delas  e assim não ocupará somente o espaço do contéudo.
+        - grid-auto-columns: 100px; toda coluna gerada automaticamente terá 100px de largura.
+        
+        - grid-auto-columns: 50px 100px; a primeira coluna terá 50px e a segunda 100px e assim sucessivamente.
+        
+    --> GRID-AUTO-ROWS: ao criar uma linha automáticamente, define o tamanho delas  e assim não ocupará somente o espaço do contéudo.
+        - grid-auto-rows: 100px; toda linha gerada automaticamente terá 100px de altura.
+
+    --> GRID-AUTO-FLOW: por padrão, ao definir o display: grid; caso não caiba mais elementos, irá quebrar em linhas. O auto-flow define se quero que crie novas linhas ou novas colunas.
+        - grid-auto-flow: column;
