@@ -1,0 +1,16 @@
+=> FUNCTION
+    - toda function é criada com Construtor Functio
+
+=> PROPRIEDADES
+    -> Function.length
+        - retorna o total de argumentos da função
+        - nomeFuncao.lenght; -> não pode ter parâmetros
+
+    -> Function.name
+        - retorna o nome da função
+        - nomeFuncao.name;
+
+=> MÉTODOS
+    -> function.call(); -> executa a função, sendo possível passar uma nova referência ao THIS dessa função.
+        - this ==> faz referência ao objeto criado no momento da construção da função.
+        - podemos usar o call() em qualquer função.

@@ -97,3 +97,15 @@
 //  h1.innerHTML;
 
 //  console.log(animaisLista.innerHTML); => mostra todo o HTML com as LI 
+
+const notas = [5, 6, 8, 9, 7, 7];
+console.log(notas);
+
+const notaSeparadas = [nota1, nota2, nota3, nota4, nota5, nota6] = notas;
+console.log(notaSeparadas);
+console.log(nota1)
+console.log(nota2)
+console.log(nota3)
+console.log(nota4)
+console.log(nota5)
+console.log(nota6)

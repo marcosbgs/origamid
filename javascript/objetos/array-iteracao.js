@@ -53,16 +53,23 @@
 
 // console.log(maiorNumero);
 
-const frutas = ['Banana', 'Pêra', 'Uva'];
-    const temUva = frutas.some((fruta) => {
-    return fruta === 'Uva';
-}); // true
+// const frutas = ['Banana', 'Pêra', 'Uva'];
+//     const temUva = frutas.some((fruta) => {
+//     return fruta === 'Uva';
+// }); // true
 
-console.log(temUva);
+// console.log(temUva);
 
-function maiorQue100(numero) {
-return numero > 100;
-}
-const numeros = [0, 43, 22, 88, 101, 2];
-const temMaior = numeros.some(maiorQue100); // true
-console.log(temMaior);
+// function maiorQue100(numero) {
+// return numero > 100;
+// }
+// const numeros = [0, 43, 22, 88, 101, 2];
+// const temMaior = numeros.some(maiorQue100); // true
+// console.log(temMaior);
+
+const numeros = [6, 43, 22, 88, 101, 29, 25, 99, 32, 55, 478, 369, 22, 147, 458];
+const frutas = ['banana', 'pera', 'uva', 'maçã', 'morango', 'melão'];
+const buscaFrutas = frutas.filter(item => item == 'maçã');
+const buscaMaior45 = numeros.filter(x => x > 45); 
+console.log(buscaMaior45);
+console.log(buscaFrutas);
