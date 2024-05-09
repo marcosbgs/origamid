@@ -1,3 +1,0 @@
-=> ACTION
-    - ação que o formulário vai ter
-    - geralmente URL
