@@ -12,6 +12,9 @@
     - posso escrever o traço, mas tenho que saber que o JS irá transformar
     - EXEMPLOS:
         data-anima-scroll-up-teste ==> animaScrollUpTeste
+
+=> UTILIZAÇÃO
+    - const div = document.querySelector('[data-cor]'); --> SELETOR DE ATRIBUTO CSS
 */
 
 const h1 = document.querySelector('h1');
